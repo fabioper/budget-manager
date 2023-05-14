@@ -17,6 +17,6 @@
 }
 
 .logo h1 {
-  font-size: 1.2rem;
+  font-size: calc(var(--font-size) + 0.15rem);
   margin: 0;
 }

@@ -11,7 +11,7 @@
 }
 
 .control label {
-  font-size: .85rem;
+  font-size: var(--font-size);
 }
 
 .control input,

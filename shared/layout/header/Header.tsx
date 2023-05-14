@@ -7,7 +7,7 @@ function Header() {
     <header className={styles.header}>
       <div className="container">
         <Link href="/" className={styles.logo}>
-          <h1>Gerenciador de Orçamentos</h1>
+          <h1>Orçamentos</h1>
         </Link>
       </div>
     </header>
