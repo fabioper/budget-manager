@@ -1,6 +1,6 @@
 "use client"
 
-import styles from "./NewBudgetForm.module.css"
+import styles from "./form.module.css"
 import useForm from "@/shared/hooks/useForm"
 import NewBudgetInput from "@/models/requests/new-budget-input"
 import { number, object, string } from "yup"
@@ -17,19 +17,16 @@ const schema = object<NewBudgetInput>({
   value: number().min(0),
 })
 
-function NewBudgetForm() {
+export function Form() {
   const { field, handleSubmit } = useForm<NewBudgetInput>({
-    initialValues: initialValues,
-    schema: schema,
+    initialValues,
+    schema,
   })
 
+  const onSubmit = async (values: NewBudgetInput) => console.log(values)
+
   return (
-    <form
-      className={styles.form}
-      onSubmit={handleSubmit(async (values) => {
-        console.log(values)
-      })}
-    >
+    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
       <div className={styles.budgetHeader}>
         <div className={styles.control}>
           <label htmlFor="title">Título</label>
@@ -65,5 +62,3 @@ function NewBudgetForm() {
     </form>
   )
 }
-
-export default NewBudgetForm

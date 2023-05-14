@@ -1,9 +1,9 @@
-import NewBudgetForm from "@/shared/parts/NewBudgetForm/NewBudgetForm"
+import Form from "./form"
 
 export default function NewBudget() {
   return (
     <div className="container">
-      <NewBudgetForm />
+      <Form />
     </div>
   )
 }
