@@ -1,0 +1,22 @@
+.header {
+  border-bottom: 1px solid var(--header-border-bottom-color);
+  margin-bottom: 1rem;
+  background: var(--header-background);
+}
+
+.header :global(.container) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 0;
+}
+
+.logo {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
