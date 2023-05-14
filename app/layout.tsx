@@ -1,9 +1,13 @@
 import "./globals.css"
-import { Inter } from "next/font/google"
+import { Roboto as Inter } from "next/font/google"
 import { PropsWithChildren } from "react"
 import Header from "@/shared/layout/header/Header"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--primary-font",
+})
 
 export const metadata = {
   title: "Gerenciador de Orçamentos",
@@ -12,8 +16,8 @@ export const metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="pt-br">
-      <body className={inter.className}>
+    <html lang="pt-br" className={inter.variable}>
+      <body>
         <Header />
         <main>{children}</main>
       </body>

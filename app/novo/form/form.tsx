@@ -4,6 +4,7 @@ import styles from "./form.module.css"
 import useForm from "@/shared/hooks/useForm"
 import NewBudgetInput from "@/models/requests/new-budget-input"
 import { number, object, string } from "yup"
+import Button from "@/shared/components/button"
 
 const initialValues = {
   title: "",
@@ -56,8 +57,8 @@ export function Form() {
         />
       </div>
 
-      <div>
-        <button type="submit">Enviar</button>
+      <div className={styles.buttons}>
+        <Button type="submit">Enviar</Button>
       </div>
     </form>
   )

@@ -1,0 +1,19 @@
+.button {
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  color: #fff;
+  padding: .7rem 1.8rem;
+  min-width: 200px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 100ms linear;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: 700;
+}
+
+.button:not(:disabled):hover {
+  filter: contrast(1.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px -3px rgba(102, 102, 102, 0.3);
+}

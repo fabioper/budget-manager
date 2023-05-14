@@ -3,7 +3,10 @@
   --foreground: #1a1a1a;
   --header-background: var(--background);
   --header-border-bottom-color: #ddd;
-  --font-size: .85rem;
+  --font-size: 1rem;
+  --color-primary: #66cdaa;
+  /*noinspection CssUnresolvedCustomProperty*/
+  --font-family: var(--primary-font)
 }
 
 * {
@@ -19,6 +22,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-size: var(--font-size);
+  font-family: var(--font-family);
 }
 
 .container {

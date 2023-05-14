@@ -31,12 +31,19 @@
 
 .control input:focus,
 .control textarea:focus {
-  outline: 1px solid #66cdaa;
+  outline: 1px solid var(--color-primary);
 }
 
 .control input {
   border: 1px solid #ddd;
   padding: .5rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
 }
 
 .budgetHeader {
