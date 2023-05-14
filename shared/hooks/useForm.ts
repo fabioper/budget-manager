@@ -21,13 +21,15 @@ export default function useForm<T extends Record<string, any>>(
   })
 
   const handleSubmit = useCallback(
-    async (handler: (values: T) => Promise<void>) =>
-      async (event: React.FormEvent<HTMLFormElement>) => {
+    (handler: (values: T) => Promise<void>) => {
+      return async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault()
         if (form.isValid) {
           await form.handleSubmit(event)
           await handler(form.values)
         }
-      },
+      }
+    },
     [form]
   )
 
@@ -63,5 +65,5 @@ export default function useForm<T extends Record<string, any>>(
     [form, isValid, markAsDirty]
   )
 
-  return { form, isValid, field, handleSubmit }
+  return { isValid, field, handleSubmit }
 }
